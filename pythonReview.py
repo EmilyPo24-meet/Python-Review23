@@ -3,17 +3,17 @@ def create_youtube_video(title, description):
 	return(new_youtube_video)
 
 def likes(youtube_video):
-	if likes in youtube_video:
+	if "likes" in youtube_video:
 		youtube_video["likes"] += 1
 	return youtube_video
 
-def likes(youtube_video):
-	if dislikes in youtube_video:
+def dislikes(youtube_video):
+	if "dislikes" in youtube_video:
 		youtube_video["dislikes"] += 1
 	return youtube_video
 
 def add_comment(youtubevideo, username, comment_text):
-	youtubevideo[username] = comment_text
+	youtubevideo["comments"] = {username : comment_text}
 	return youtubevideo
 
 
@@ -22,6 +22,6 @@ likes(youtube_video1)
 dislikes(youtube_video1)
 add_comment(youtube_video1, "Emily", "Very Very AHH")
 print(youtube_video1)
-while youtube_video1["likes"] < 496:
+while youtube_video1["likes"] < 495:
 	likes(youtube_video1)
 print(youtube_video1)
